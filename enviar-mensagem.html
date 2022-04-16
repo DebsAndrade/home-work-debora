@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Mensagem</title>
+</head>
+
+<body>
+    <header>
+        <h1>Enviar Mensagem</h1>
+    </header>
+    <main>
+        <form>
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" placeholder="Digite aqui seu nome" required>
+            <label for="surname">Sobrenome</label>
+            <input type="text" id="surname" name="surname" placeholder="Digite aqui seu sobrenome" required>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Digite aqui seu e-mail" required>
+            <input type="radio" id="feminine" name="gender">
+            <label for="feminine">Feminino</label>
+            <input type="radio" id="masculine" name="gender">
+            <label for="masculine">Masculino</label>
+            <fieldset>
+                <legend>Temas de Interesse</legend>
+                <input type="checkbox" id="html" name="html">
+                <label for="html">HTML</label>
+                <input type="checkbox" id="css" name="css">
+                <label for="css">CSS</label>
+                <input type="checkbox" id="javascript" name="javascript">
+                <label for="javascript">JavaScript</label>
+                <input type="checkbox" id="react" name="react">
+                <label for="react">React</label>
+            </fieldset>
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" wrap min="10" maxlength="1000"></textarea>
+            <input type="reset" name="reset" value="Limpar">
+            <input type="submit" name="send" value="Enviar">
+        </form>
+    </main>
+    <footer>
+        <a href="index.html">Voltar</a>
+    </footer>
+</body>
+
+</html>
