@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/enviar-mensagem.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+
     <title>Enviar Mensagem</title>
 </head>
 
@@ -14,16 +19,30 @@
     </header>
     <main>
         <form>
-            <label for="name">Nome</label>
-            <input type="text" id="name" name="name" placeholder="Digite aqui seu nome" required>
-            <label for="surname">Sobrenome</label>
-            <input type="text" id="surname" name="surname" placeholder="Digite aqui seu sobrenome" required>
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="Digite aqui seu e-mail" required>
-            <input type="radio" id="feminine" name="gender">
-            <label for="feminine">Feminino</label>
-            <input type="radio" id="masculine" name="gender">
-            <label for="masculine">Masculino</label>
+            <section class="group-input">
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="name" placeholder="Digite aqui seu nome" required>
+            </section>
+            <section class="group-input">
+                <label for="surname">Sobrenome</label>
+                <input type="text" id="surname" name="surname" placeholder="Digite aqui seu sobrenome" required>
+            </section>
+            <section class="group-input">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Digite aqui seu e-mail" required>
+            </section>
+            <section class="group-input">
+                <label for="gender">Escolha seu Gênero</label>
+                <select name="gender" id="gender">
+                    <option value="" disabled selected>Escolha uma opção</option>
+                    <option value="MULHER_CIS">Mulher Cis</option>
+                    <option value="HOMEM_CIS">Homem Cis</option>
+                    <option value="MULHER_TRANS">Mulher Trans</option>
+                    <option value="HOMEM_TRANS">Homem Trans</option>
+                    <option value="NAO_BINARIO">Não-Binário</option>
+                    <option value="PREFIRO_NAO_INFORMAR">Prefiro não informar</option>
+                </select>
+            </section>
             <fieldset>
                 <legend>Temas de Interesse</legend>
                 <input type="checkbox" id="html" name="html">
@@ -34,9 +53,17 @@
                 <label for="javascript">JavaScript</label>
                 <input type="checkbox" id="react" name="react">
                 <label for="react">React</label>
+                <input type="checkbox" id="angular" name="angulat">
+                <label for="angular">Angular</label>
+                <input type="checkbox" id="vuejs" name="vuejs">
+                <label for="vuejs">VueJS</label>
+                <input type="checkbox" id="nodejs" name="nodejs">
+                <label for="nodejs">NodeJS</label>
+                <input type="checkbox" id="bootstrap" name="bootstrap">
+                <label for="bootstrap">Bootstrap</label>
             </fieldset>
             <label for="message">Mensagem</label>
-            <textarea id="message" name="message" wrap min="10" maxlength="1000"></textarea>
+            <textarea id="message" name="message" wrap minlength="10" maxlength="1000"></textarea>
             <input type="reset" name="reset" value="Limpar">
             <input type="submit" name="send" value="Enviar">
         </form>
